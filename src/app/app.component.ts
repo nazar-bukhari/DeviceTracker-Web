@@ -11,9 +11,9 @@ import {Position} from "./position";
 export class AppComponent implements OnInit{
 
   title = 'tracker app';
-  lat: any;
-  lon: any;
-  locations: Position;
+  // lat: any;
+  // lon: any;
+  locations: Position[];
 
   constructor(private positionService : PositionService){}
 
@@ -24,10 +24,7 @@ export class AppComponent implements OnInit{
   getPosition(){
 
     this.positionService.getDeviceSpecificLocation().subscribe(
-      data => {
-        this.lat = data.latitude;
-        this.lon = data.longitude;
-      },
+      data => this.locations = data,
       (err: HttpErrorResponse) => {
         console.error("ComponentError: ",err);
       },

@@ -5,8 +5,11 @@
   </h1>
 </div>
 
-<agm-map [latitude]=lat [longitude]=lon [zoom]="11">
-  <agm-marker [latitude]=lat [longitude]=lon></agm-marker>
-</agm-map>
 
 
+<div *ngFor=" let loc of locations">
+  {{loc.latitude}} {{loc.longitude}}
+  <!--<agm-map [latitude]=loc.latitude [longitude]=loc.longitude [zoom]="11">-->
+    <!--<agm-marker [latitude]=loc.latitude [longitude]=loc.longitude></agm-marker>-->
+  <!--</agm-map>-->
+</div>

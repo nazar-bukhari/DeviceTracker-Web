@@ -4,8 +4,8 @@ export class Position {
 
     public id: number,
     public device: any,
-    public latitude: any,
-    public longitude: any,
+    public latitude: number,
+    public longitude: number,
     public receiveTime: string,
   ){}
 }

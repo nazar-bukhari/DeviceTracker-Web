@@ -12,7 +12,7 @@ export class PositionService {
 
   constructor(private httpClient: HttpClient) { }
 
-  getDeviceSpecificLocation(): Observable<Position>{
+  getDeviceSpecificLocation(): Observable<Position[]>{
     return this.httpClient.get(this.locationApi)
       .catch(this.handleErrorObservable);
   }
