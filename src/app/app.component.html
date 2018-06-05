@@ -1,15 +1,18 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
   <h1>
-    Welcome to {{ title }}!
+     {{ title }}
   </h1>
-</div>
 
+  <!--<label>Select Tv Channel</label>-->
+  <!--<select>-->
+    <!--<option *ngFor="let loc of locations" [value]="loc.device">-->
+      <!--{{loc.device.name}}-->
+    <!--</option>-->
+  <!--</select>-->
 
+</div> <br>
 
-<div *ngFor=" let loc of locations">
-  {{loc.latitude}} {{loc.longitude}}
-  <!--<agm-map [latitude]=loc.latitude [longitude]=loc.longitude [zoom]="11">-->
-    <!--<agm-marker [latitude]=loc.latitude [longitude]=loc.longitude></agm-marker>-->
-  <!--</agm-map>-->
-</div>
+  <agm-map [latitude]=23.6850 [longitude]=90.3563 [zoom]="7">
+    <agm-marker *ngFor="let loc of locations" [latitude]=loc.latitude [longitude]=loc.longitude></agm-marker>
+  </agm-map>

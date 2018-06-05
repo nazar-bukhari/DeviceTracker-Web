@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AgmCoreModule } from '@agm/core';
 import { PositionService } from './service/position.service';
+import { DeviceService } from './service/device.service';
 
 
 @NgModule({
@@ -19,7 +20,7 @@ import { PositionService } from './service/position.service';
       apiKey: 'AIzaSyB0WqLqEbFYfALW8_Nm-wHwP-fYvP17sHY'
     })
   ],
-  providers: [PositionService],
+  providers: [PositionService, DeviceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

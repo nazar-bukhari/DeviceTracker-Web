@@ -10,9 +10,7 @@ import {Position} from "./position";
 })
 export class AppComponent implements OnInit{
 
-  title = 'tracker app';
-  // lat: any;
-  // lon: any;
+  title = 'Device tracker app';
   locations: Position[];
 
   constructor(private positionService : PositionService){}
