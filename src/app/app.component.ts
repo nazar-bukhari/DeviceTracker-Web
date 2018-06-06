@@ -2,6 +2,8 @@ import {Component, OnInit} from '@angular/core';
 import {PositionService} from "./service/position.service";
 import {HttpErrorResponse} from "@angular/common/http";
 import {Position} from "./position";
+import {Observable} from "rxjs/Observable";
+import {IntervalObservable} from "rxjs/observable/IntervalObservable";
 
 @Component({
   selector: 'app-root',
@@ -16,7 +18,11 @@ export class AppComponent implements OnInit{
   constructor(private positionService : PositionService){}
 
   ngOnInit(){
-    this.getPosition();
+
+    IntervalObservable.create(10000)
+      .subscribe(() => {
+        this.getPosition();
+      });
   }
 
   getPosition(){
