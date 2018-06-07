@@ -8,7 +8,7 @@ import 'rxjs/add/operator/catch';
 @Injectable()
 export class PositionService {
 
-  private readonly locationApi = "http://127.0.0.1:8080/position/2";
+  private readonly locationApi = "http://127.0.0.1:8080/position/1";
 
   constructor(private httpClient: HttpClient) { }
 
